@@ -10,7 +10,7 @@ def get_quotes():
         quotes = json.load(file)
     return quotes
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def get_random_quote():
     capital = get_quotes()
     random_cap = random.choice(list(capital.keys()))
