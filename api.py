@@ -42,8 +42,7 @@ def scrape_links():
 
     # Fetch the webpage conten
     try:
-      response = requests.get(url, proxies = {"http":"http://proxy.server:3128", "https":"https://proxy.server:3128"}
-)
+      response = requests.get(url)
       response.raise_for_status()  # Ensure we notice bad response
 
     except requests.exceptions.RequestException as e:
